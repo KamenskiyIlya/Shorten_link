@@ -7,7 +7,7 @@ import argparse
 VK_URL = 'https://api.vk.ru/method/{}'
 
 
-def createParser():
+def create_parser():
     parser = argparse.ArgumentParser(description='Shortening a link and counting clicks on the shortened link')
     parser.add_argument('url', type=str, help='Input link for manipulation')
     args = parser.parse_args()
