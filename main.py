@@ -7,7 +7,7 @@ import argparse
 VK_URL = 'https://api.vk.ru/method/{}'
 
 
-def create_parser():
+def get_user_url():
     parser = argparse.ArgumentParser(description='Shortening a link and counting clicks on the shortened link')
     parser.add_argument('url', type=str, help='Input link for manipulation')
     args = parser.parse_args()
@@ -89,7 +89,7 @@ def is_shorten_link(token, url):
 
 
 if __name__ == "__main__":
-    user_url = createParser()
+    user_url = get_user_url()
     load_dotenv()
     vk_token = os.environ['VK_TOKEN']
 
